@@ -24,7 +24,7 @@ Start the virtual machine with
     vagrant up
 
 Now the local webserver should be up and running, view it by opening the address `localhost:8080` in your browser.
-The files being served are located in `.../Tembryo/wisdota-webserver/files` and should immediately update as you change them. 
+The files being served are located in `.../Tembryo/wisdota-webserver/files`. 
 
 Changes to the Node/Express server require a restart of the webserver (e.g. by restarting the whole VM).
 
