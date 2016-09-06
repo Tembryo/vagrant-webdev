@@ -1,0 +1,22 @@
+proxy:
+  image: jwilder/nginx-proxy
+  ports:
+    - "80:80"
+  volumes:
+    - /var/run/docker.sock:/tmp/docker.sock:ro
+    - /home/fischerq/Documents/Tembryo/wisdota-nginx/vhosts:/etc/nginx/vhost.d:ro
+webserver_dev:
+  build: /tembryo/wisdota-webserver
+  expose:
+    - "42000"
+  volumes:
+    - /tembryo/wisdota-webserver/src:/source:ro
+    - /tembryo/wisdota-webserver/files:/files:ro
+    - /tembryo/wisdota-shared-code:/shared-code:ro
+    - /tembryo/storage/webserver:/storage
+    - /tembryo/storage/shared:/shared
+  environment:
+    VERSION: "DEV"
+    VIRTUAL_HOST: "localhost"
+    VIRTUAL_PORT: "42000"
+    OUTSIDE_PORT: "8080"
