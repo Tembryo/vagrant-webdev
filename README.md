@@ -11,13 +11,12 @@ Create a base directory `Tembryo` to contain all git-versioned content.
     mkdir Tembryo
     cd Tembryo
 
-Clone this repository into `Tembryo` with
+Clone the necessary repositories into `Tembryo` with
 
     git clone https://github.com/Tembryo/vagrant-webdev.git
-
-Pull all other required repositories by running the setup script
-
-    ./setup.sh
+    git clone https://github.com/Tembryo/wisdota-shared-code.git
+    git clone https://github.com/Tembryo/wisdota-nginx.git
+    git clone https://github.com/Tembryo/wisdota-webserver.git
 
 Start the virtual machine with
 
@@ -31,6 +30,14 @@ Changes to the Node/Express server require a restart of the webserver (e.g. by r
 Close the VM with
 
     vagrant halt
+
+## More tips
+
+Interesting commands are:
+
+Redo the setup of the VM
+
+    vagrant reload --provision
 
 ## Documentation
 
