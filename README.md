@@ -18,8 +18,9 @@ Clone the necessary repositories into `Tembryo` with
     git clone https://github.com/Tembryo/wisdota-nginx.git
     git clone https://github.com/Tembryo/wisdota-webserver.git
 
-Start the virtual machine with
+Switch to the `vagrant-webdev` directory and start the virtual machine with:
 
+    cd vagrant-webdev
     vagrant up
 
 Now the local webserver should be up and running, view it by opening the address `localhost:8080` in your browser.
